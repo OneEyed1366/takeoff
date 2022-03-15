@@ -43,7 +43,7 @@ function UsersAddComponent(): JSX.Element {
         }}
         type="submit"
       >
-        Add {username}
+        Add user "{username}"
       </button>
     </form>
   );

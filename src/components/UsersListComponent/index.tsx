@@ -57,17 +57,25 @@ function UsersListComponent({ filterData }: usersListProps): JSX.Element {
                   }}
                 />
               </td>
-              <td onClick={() => dispatch(deleteUser(username))}>
-                Delete {username}
+              <td>
+                <button
+                  onClick={() => dispatch(deleteUser(username))}
+                >
+                  Delete {username}
+                </button>
               </td>
-              <td onClick={() => {
-                dispatch(updateUser({
-                  filterValue: username,
-                  username: newUsername ? newUsername : username,
-                  password: newPassword ? newPassword : password,
-                }));
-              }}>
-                Update {username}
+              <td>
+                <button
+                  onClick={() => {
+                    dispatch(updateUser({
+                      filterValue: username,
+                      username: newUsername ? newUsername : username,
+                      password: newPassword ? newPassword : password,
+                    }));
+                  }}
+                >
+                  Update {username}
+                </button>
               </td>
             </tr>
           ))

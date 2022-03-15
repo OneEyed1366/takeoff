@@ -13,7 +13,15 @@ const usersSlice = createSlice({
   initialState,
   reducers: {
     createUser: (state: authCredentialsInterface[], { payload }: PayloadAction<authCredentialsInterface>): void => {
-      state.push(payload);
+      const isUnique = !state.some(({ username, password }) => {
+        return (
+          (username === payload.username) && (password === payload.password)
+        );
+      });
+
+      if (isUnique) {
+        state.push(payload);
+      }
     },
     updateUser: (state: authCredentialsInterface[], { payload }: PayloadAction<usersUpdateInterface>): void => {
       try {
