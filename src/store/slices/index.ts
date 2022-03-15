@@ -1,7 +1,9 @@
-import counter from './counter';
-import { pokemonApi } from '../services/pokemon';
+import auth from './auth';
+import { initialApi } from '../services';
+import users from './users';
 
 export default {
-  [pokemonApi.reducerPath]: pokemonApi.reducer,
-  counter,
+  [initialApi.reducerPath]: initialApi.reducer,
+  auth,
+  users,
 };

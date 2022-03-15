@@ -1,12 +1,12 @@
-import reducers from './slices';
+import reducer from './slices';
 import { configureStore } from '@reduxjs/toolkit';
-import { pokemonApi } from './services/pokemon';
+import { initialApi } from './services';
 
 export const store = configureStore({
-  reducer: reducers,
+  reducer,
   middleware: (getDefaultMiddleware) => {
     return getDefaultMiddleware().concat(
-      pokemonApi.middleware,
+      initialApi.middleware,
     );
   },
 });
