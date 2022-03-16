@@ -1,0 +1,20 @@
+@use '../src/styles/vars';
+
+$baseGap: 1rem;
+
+.wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 1rem;
+
+  fieldset {
+    display: flex;
+    gap: $baseGap;
+
+    label {
+      display: flex;
+      gap: $baseGap;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@use '../src/styles/vars';
+
+.wrapper {
+  td {
+    padding: 0 0.5rem;
+  }
+  button {
+    background: vars.$unActiveColor;
+    transition: vars.$baseTransition;
+    border: none;
+    border-radius: 4px;
+    padding: 0.25rem;
+
+    &:hover {
+      background: vars.$activeColor;
+    }
+  }
+}

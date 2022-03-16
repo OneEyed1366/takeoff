@@ -1,0 +1,25 @@
+@use '../src/styles/vars';
+
+.wrapper {
+  a {
+    text-decoration: none;
+    color: vars.$unActiveColor;
+    transition: vars.$baseTransition;
+
+    &:hover {
+      color: vars.$activeColor;
+    }
+  }
+  li {
+    list-style: none;
+  }
+  nav {
+    ul {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+}

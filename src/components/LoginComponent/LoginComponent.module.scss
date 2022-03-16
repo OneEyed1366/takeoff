@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+
+  fieldset {
+    display: flex;
+    gap: 1rem;
+  }
+  label {
+    display: flex;
+    gap: 1rem;
+  }
+}

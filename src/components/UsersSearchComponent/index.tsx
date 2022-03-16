@@ -1,10 +1,12 @@
+import styles from './UsersSearchComponent.module.scss';
+
 interface usersSearchInterface {
   incomingFunction: (data: string) => void,
 }
 
 function UsersSearchComponent({ incomingFunction }: usersSearchInterface): JSX.Element {
   return (
-    <article>
+    <article className={styles.wrapper}>
       <label htmlFor="username-search">
         <input
           type="text"

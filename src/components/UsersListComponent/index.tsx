@@ -1,9 +1,9 @@
-import { useGetUsersQuery } from '../../store/services/users';
 import { authCredentialsInterface } from '../../store/slices/auth';
 import { deleteUser, updateUser } from '../../store/slices/users';
 import useTypedDispatch from '../../hooks/useTypedDispatch';
 import useTypedSelector from '../../hooks/useTypedSelector';
 import { useState } from 'react';
+import styles from './UsersListComponent.module.scss';
 
 interface usersListProps {
   filterData?: string,
@@ -17,7 +17,7 @@ function UsersListComponent({ filterData }: usersListProps): JSX.Element {
   const [newPassword, setNewPassword] = useState('');
 
   return (
-    <table>
+    <table className={styles.wrapper}>
       {/* Rendering table head columns */}
       <thead>
       {

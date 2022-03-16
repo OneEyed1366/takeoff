@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import UsersSearchComponent from '../../components/UsersSearchComponent';
 import UsersListComponent from '../../components/UsersListComponent';
 import UsersAddComponent from '../../components/UsersAddComponent';
 import usePrivateRoute from '../../hooks/usePrivateRoute';
+import styles from './UsersPage.module.scss';
 
 function UsersPage(): JSX.Element {
   const [search, setSearch] = useState('');
@@ -11,8 +11,11 @@ function UsersPage(): JSX.Element {
   usePrivateRoute();
 
   return (
-    <article>
+    <article className={styles.wrapper}>
       <header>
+        <h1>
+          Here you filter all users by username
+        </h1>
         <UsersSearchComponent incomingFunction={setSearch} />
       </header>
       <section>

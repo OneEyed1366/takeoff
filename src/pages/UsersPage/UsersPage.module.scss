@@ -1,0 +1,6 @@
+.wrapper, .wrapper > * {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1rem;
+}

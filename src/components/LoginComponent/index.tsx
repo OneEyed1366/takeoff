@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { authState, login, logout } from '../../store/slices/auth';
 import useTypedSelector from '../../hooks/useTypedSelector';
 import useTypedDispatch from '../../hooks/useTypedDispatch';
+import styles from './LoginComponent.module.scss';
 
 function LoginComponent(): JSX.Element {
   const dispatch = useTypedDispatch();
@@ -11,9 +12,10 @@ function LoginComponent(): JSX.Element {
   const { isAuthorized } = useTypedSelector((state) => state.auth);
 
   return (
-    <form action="">
+    <form action="" className={styles.wrapper}>
       <fieldset>
         <label htmlFor="username-input">
+          <span>Login</span>
           <input
             type="text"
             name="username-input"
@@ -23,6 +25,7 @@ function LoginComponent(): JSX.Element {
           />
         </label>
         <label htmlFor="password-input">
+          <span>Password</span>
           <input
             type="password"
             name="password-input"
@@ -53,7 +56,7 @@ function LoginComponent(): JSX.Element {
               onClick={(el): void => {
                 el.preventDefault();
 
-                dispatch(logout(username));
+                dispatch(logout());
               }}
             >
               Logout

@@ -1,0 +1,10 @@
+@use '../src/styles/vars';
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+
+  input {
+    width: 100%;
+  }
+}

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import useTypedDispatch from '../../hooks/useTypedDispatch';
 import { createUser } from '../../store/slices/users';
+import styles from './UsersAddComponent.module.scss';
 
 function UsersAddComponent(): JSX.Element {
   const dispatch = useTypedDispatch();
@@ -9,7 +10,7 @@ function UsersAddComponent(): JSX.Element {
   const [password, setPassword] = useState('');
 
   return (
-    <form>
+    <form className={styles.wrapper}>
       <fieldset>
         <label htmlFor="username-input">
           <span>Username</span>
@@ -33,6 +34,7 @@ function UsersAddComponent(): JSX.Element {
         </label>
       </fieldset>
       <button
+        disabled={username === ''}
         onClick={(el) => {
           el.preventDefault();
 
@@ -43,7 +45,9 @@ function UsersAddComponent(): JSX.Element {
         }}
         type="submit"
       >
-        Add user "{username}"
+        {
+          username !== '' ? `Add new user ${username}` : 'Please, write new user"s data'
+        }
       </button>
     </form>
   );
