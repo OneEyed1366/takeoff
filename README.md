@@ -1,4 +1,4 @@
-# Тестовое задание до TakeOff
+# Тестовое задание для TakeOff
 
 ## Адреса
 
@@ -8,7 +8,7 @@ Http://localhost:3000
 
 ### Прототип API
 
-http://locslhost:3081
+http://localhost:3081
 
 ## Команды
 
